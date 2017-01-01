@@ -87,6 +87,11 @@ public:
 
         horizontalSlider = new QSlider(horizontalLayoutWidget);
         horizontalSlider->setObjectName(QStringLiteral("horizontalSlider"));
+        QSizePolicy sizePolicy1(QSizePolicy::Maximum, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(horizontalSlider->sizePolicy().hasHeightForWidth());
+        horizontalSlider->setSizePolicy(sizePolicy1);
         horizontalSlider->setOrientation(Qt::Horizontal);
 
         horizontalLayout_3->addWidget(horizontalSlider);
